@@ -8,12 +8,36 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Down for Maintenance</title>
-		<link
-			rel="stylesheet"
-			href="/style.css"
-		/>
 	</head>
 	<body>
+		<style>
+			body,
+			html {
+				height: 100%;
+				margin: 0;
+				font-family: 'Arial', sans-serif;
+				background: #121212;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.maintenance-container {
+				text-align: center;
+				padding: 20px;
+			}
+
+			h1 {
+				margin-top: 20px;
+				font-size: 2.5rem;
+			}
+
+			p {
+				color: #bbbbbb;
+				font-size: 1.2rem;
+			}
+		</style>
 		<div class="maintenance-container">
 			<div id="lottie-animation"></div>
 			<h1>We're currently under maintenance</h1>
@@ -28,6 +52,14 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
-		<script src="/script.js"></script>
+		<script>
+			const animation = lottie.loadAnimation({
+				container: document.getElementById('lottie-animation'),
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: 'man-updating-laptop-system.json'
+			})
+		</script>
 	</body>
 </html>
