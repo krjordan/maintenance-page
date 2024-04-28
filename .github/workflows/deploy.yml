@@ -26,4 +26,4 @@ jobs:
 
       - name: Copy files to server
         run: |
-          rsync -avz --delete ./ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }}:/srv/websites/maintenance-page/
+          rsync -avz --delete --exclude '.git/' --exclude '.github/' ./ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }}:/srv/websites/maintenance-page/
